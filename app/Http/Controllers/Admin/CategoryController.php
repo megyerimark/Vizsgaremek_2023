@@ -55,14 +55,8 @@ class CategoryController extends Controller
         return view('admin.categories.edit', compact('category'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $category)
+    
+    public function update(Request $request,Category $category)
     {
         $request->validate([
             'name'=>'required',
@@ -70,9 +64,16 @@ class CategoryController extends Controller
         ]);
         $image = $category->image;
         if($request->hasFile('image')){
-            Storage::delete($category->image);
+            //Storage::delete($category->image);
+            // Storage::delete($category->image);
             $image = $request->file("image")->store('public/categories');
         }
+        $category->update([
+            "name"=> $request->name,
+            "description"=> $request->description,
+            "image"=>$image
+        ]);
+        return view('admin.categories.edit', compact('category'));
     }
 
     
