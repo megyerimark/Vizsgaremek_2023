@@ -30,12 +30,7 @@ class CategoryController extends Controller
         return view("admin.categories.create");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(CategoryStoreRequest $request)
     {
         $image = $request->file("image")->store('public/categories');
@@ -67,17 +62,20 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $category)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+        ]);
+        $image = $category->image;
+        if($request->hasFile('image')){
+            Storage::delete($category->image);
+            $image = $request->file("image")->store('public/categories');
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy($id)
     {
         //
