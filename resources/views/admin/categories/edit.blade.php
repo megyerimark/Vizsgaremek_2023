@@ -43,7 +43,7 @@
     </div>
     <div class="mt-6 p-4">
     <button type="submit" 
-    class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg">Frissít</button>
+    class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg">Frissítés</button>
 </div>
   
   </form>
