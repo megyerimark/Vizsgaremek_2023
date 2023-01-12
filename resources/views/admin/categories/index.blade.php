@@ -43,26 +43,30 @@
                 {{$category->name}}
             </td>
             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <div class="">
-                    <img  class="w-32 h-32" src="{{Storage::url($category->image)}}" alt="">
+                <div class="px-1 py-2">
+                    <img  class="w-20 h-02" src="{{Storage::url($category->image)}}" alt="">
                   </div>
             </td>
             <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {{$category->description}}
             </td>
-            
-            <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <a href="{{route('admin.categories.edit', $category->id)}}" class="px-4 py-2 bg-red-500 hover:bg-green-700 rounded">Szerkesztés</a>
+    
+           
+                <td class="py-4 px-4text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <div class="flex space-x-2">
-                    <form method="POST" 
-                    action="{{route('admin.categories.destroy', $category->id)}}"
-                    class="px-4 py-2 bg-yellow-500 hover:bg-blue-700 rounded-lg"
-                    onsubmit="return confirm('Biztos törölni szeretnéd?');">
-                @csrf
-                @method('DELETE')
-                <button type="submit" >Törlés</button>
-            
-            </form>
+                    <a href="{{route('admin.categories.edit', $category->id)}}" class="px-4 py-2 bg-blue-500 hover:bg-green-700 rounded">Szerkesztés</a>
+                
+                        <form method="POST"
+                        action="{{route('admin.categories.destroy', $category->id)}}"
+                        class="px-4 py-2 bg-red-500 hover:bg-blue-700 rounded-lg"
+                        onsubmit="return confirm('Biztos törölni szeretnéd?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" >Törlés</button>
+                
+                </form>
+            </div>
+              
                 </div>
             </td>
     

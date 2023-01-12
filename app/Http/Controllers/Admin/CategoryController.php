@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryStoreRequest;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -64,8 +65,8 @@ class CategoryController extends Controller
         ]);
         $image = $category->image;
         if($request->hasFile('image')){
-            //Storage::delete($category->image);
-            // Storage::delete($category->image);
+           Storage::delete($category->image);
+        Storage::delete($category->image);
             $image = $request->file("image")->store('public/categories');
         }
         $category->update([
@@ -77,8 +78,13 @@ class CategoryController extends Controller
     }
 
     
-    public function destroy($id)
+    public function destroy(Category $category)
+    
     {
-        //
+    
+        Storage::delete($category->image);
+        $category->delete();
+
+        return to_route('admin.categories.index');
     }
 }
