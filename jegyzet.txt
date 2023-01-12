@@ -1,0 +1,4 @@
+Ha szeretnéd hogy megjelenjenek a képek , elsőnek nyilvánossá kell hogy tedd az adott mappát amiben tárolod őket.Jelen esetben a public/categories ....
+
+
+php artisan storage:link
