@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex m-2 p-2">
-                <a href="{{ route('admin.categories.index')}}"
+                <a href="{{ route('admin.menus.index')}}"
                 class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700  text-white rounded-lg">Menü Index</a>
             </div>
 
@@ -21,16 +21,36 @@
         <input type="text" id="title" wire:model.lazy="title" name="title" class="block w-full transition duration-150 ease-in-out appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
       </div>
     </div>
+   
     <div class="sm:col-span-6">
       <label for="image" class="block text-sm font-medium text-gray-700"> Kép </label>
       <div class="mt-1">
         <input type="file" id="image"  name="image" class="block w-full transition duration-150 ease-in-out appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
       </div>
     </div>
+    <div class="sm:col-span-6">
+      <label for="price" class="block text-sm font-medium text-gray-700"> Ár </label>
+      <div class="mt-1">
+        <input type="number" id="price" wire:model.lazy="price" name="price" 
+        min='0.00' max="1000000.000" step='0.01'
+        class="block w-full transition duration-150 ease-in-out appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+      </div>
+    </div>
     <div class="sm:col-span-6 pt-5">
       <label for="body" class="block text-sm font-medium text-gray-700">Megjegyzés</label>
       <div class="mt-1">
-        <textarea id="body" rows="3" wire:model.lazy="body" class="shadow-sm focus:ring-indigo-500 appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+        <textarea id="body" rows="3" wire:model.lazy="body" 
+        class="shadow-sm focus:ring-indigo-500 appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+      </div>
+    </div>
+    <div class="sm:col-span-6 pt-5">
+      <label for="body" class="block text-sm font-medium text-gray-700">Megjegyzés</label>
+      <div class="mt-1">
+        <select multiple>
+          @foreach ($categories as $category)
+          <option class="">{{$category->name}}</option>
+          @endforeach
+        </select>
       </div>
     </div>
     <div class="mt-6 p-4">
