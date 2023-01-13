@@ -7,6 +7,8 @@ use App\Http\Requests\MenuStoreRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Menu;
+use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
@@ -29,12 +31,16 @@ class MenuController extends Controller
     
 
         $image = $request->file("image")->store('public/menus');
-        Menu::create([
+       $menu = Menu::create([
             "name" => $request->name,
             "description" => $request->description,
             "image" => $image,
             'price'=>$request->price
         ]);
+        if($request->has('categories')){
+            $menu->categories()->attach($request->categories);
+
+        }
 
         return to_route('admin.menus.index');
 
@@ -47,33 +53,39 @@ class MenuController extends Controller
    
     public function show($id)
     {
-        //
+        
     }
 
     
-    public function edit($id)
+    public function edit(Menu $menu)
     {
-        //
+        $categories = Category::all();
+        return view('admin.menus.edit', compact('menu','categories'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+  
+    public function update(Request $request, Menu $menu)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'price'=>'required',
+        ]);
+        $image = $menu->image;
+        if($request->hasFile('image')){
+          
+        Storage::delete($menu->image);
+            $image = $request->file("image")->store('public/menus');
+        }
+        $menu->update([
+            "name"=> $request->name,
+            "description"=> $request->description,
+            "image"=>$image,
+            'price'=>$request->price
+        ]);
+        return to_route('admin.menus.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //
