@@ -62,6 +62,9 @@ class CategoryController extends Controller
         $request->validate([
             'name'=>'required',
             'description'=>'required',
+        ],[
+            
+            "name.required"=>'Tölsd ki a név mezőt'
         ]);
         $image = $category->image;
         if($request->hasFile('image')){
@@ -74,7 +77,7 @@ class CategoryController extends Controller
             "description"=> $request->description,
             "image"=>$image
         ]);
-        return view('admin.categories.edit', compact('category'));
+        return to_route('admin.categories.index');
     }
 
     

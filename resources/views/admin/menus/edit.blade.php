@@ -41,11 +41,15 @@
       </div>
     </div>
     <div class="sm:col-span-6 pt-5">
-      <label for="description" class="block text-sm font-medium text-gray-700">Megjegyzés</label>
+      <label for="description" class="block text-sm font-medium text-gray-700">Kategória</label>
       <div class="mt-1">
-        <textarea id="description" rows="3" name="description"
-         class="shadow-sm focus:ring-indigo-500 appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
-        {{$menu->description}}</textarea>
+      <select id="categories" name="categories[]" class="form-multiselect block w-full mt-1"
+       multiple>
+             @foreach ($categories as $category)
+              <option value="{{ $category->id }}"@selected($menu->categories->contains($category))>
+                {{ $category->name }}</option>
+           @endforeach
+      </select>
       </div>
     </div>
     <div class="mt-6 p-4">
