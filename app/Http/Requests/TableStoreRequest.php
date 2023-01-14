@@ -28,6 +28,16 @@ class TableStoreRequest extends FormRequest
             "guest_number"=>['required'],
             "status"=>['required'],
             "location"=>['required'],
-                ];
+        ];
+    }
+    public function messages() {
+ 
+        return [
+            "name.required" => "A név mező kitöltése kötelező!",
+            "guest_number.required" => "Egyedül ne menj étterembe!",
+            "status.required" => "Státusz mező üresen maradt!",
+            "location.required" => "Töltsd ki mielőtt nem marad több hely!",
+           
+        ];
     }
 }

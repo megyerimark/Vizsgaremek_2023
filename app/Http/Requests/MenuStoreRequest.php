@@ -22,4 +22,14 @@ class MenuStoreRequest extends FormRequest
             
         ];
     }
+    public function messages() {
+ 
+        return [
+            "name.required" => "A név mező kitöltése kötelező!",
+            "image.required" => "Nincs kiválasztott kép, feltöltés sikertelen !",
+            "description.required" => "Megjegyzés kitöltése kötelező!",
+            "price.required" => "Ingyen nem adunk semmit!",
+           
+        ];
+    }
 }

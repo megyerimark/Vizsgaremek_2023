@@ -30,4 +30,13 @@ class CategoryStoreRequest extends FormRequest
         
         ];
     }
+    public function messages() {
+ 
+        return [
+            "name.required" => "A név mező kitöltése kötelező!",
+            "image.required" => "Nincs kiválasztott kép , feltöltés sikertelen!",
+            "description.required" => "A megjegyzés mező kitöltése kötelező!",
+           
+        ];
+    }
 }
