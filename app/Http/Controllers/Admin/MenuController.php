@@ -7,7 +7,6 @@ use App\Http\Requests\MenuStoreRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Menu;
-use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
@@ -28,16 +27,7 @@ class MenuController extends Controller
     
     public function store(MenuStoreRequest $request)
     {
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'price'=>'required',
-        ],[
-            "name.required"=>"Töltsd ki a név mezőt",
-            "description.required"=>"Töltsd ki a megjegyzés mezőt",
-            "price.required"=>"Töltsd ki az ár  mezőt",
-        ]);
-        print_r('store');
+       
     
 
         $image = $request->file("image")->store('public/menus');
@@ -76,16 +66,7 @@ class MenuController extends Controller
   
     public function update(Request $request, Menu $menu)
     {
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'price'=>'required',
-        ],[
-            "name.required"=>"Töltsd ki a név mezőt",
-            "description.required"=>"Töltsd ki a megjegyzés mezőt",
-            "price.required"=>"Töltsd ki az ár  mezőt",
-        ]);
-        print_r('update');
+       
         $image = $menu->image;
         if($request->hasFile('image')){
           

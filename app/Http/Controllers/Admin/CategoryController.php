@@ -59,13 +59,6 @@ class CategoryController extends Controller
     
     public function update(Request $request,Category $category)
     {
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-        ],[
-            
-            "name.required"=>'Tölsd ki a név mezőt'
-        ]);
         $image = $category->image;
         if($request->hasFile('image')){
            Storage::delete($category->image);
