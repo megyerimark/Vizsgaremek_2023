@@ -36,8 +36,8 @@ class TableController extends Controller
 
 
         Table::create([
-            'name'=>$request->name->required,
-            'guest_number'=>$request->guest_number->require,
+            'name'=>$request->name,
+            'guest_number'=>$request->guest_number,
             'location'=>$request->location,
             'status'=>$request->status,
 
