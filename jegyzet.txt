@@ -5,3 +5,5 @@ php artisan storage:link
 Admin bejelentkezéshez szüksges adatok : 
 email:a@lan.hu
 jelszó:password
+
+php artisan key:generate
