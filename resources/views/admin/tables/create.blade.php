@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex m-2 p-2">
                 <a href="{{ route('admin.tables.index') }}"
-                    class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">Table Index</a>
+                    class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">Asztal Index</a>
             </div>
             <div class="m-2 p-2 bg-slate-100 rounded">
                 <div class="space-y-8 divide-y divide-gray-200 w-1/2 mt-10">
@@ -50,7 +50,7 @@
                             @enderror
                         </div>
                         <div class="sm:col-span-6 pt-5">
-                            <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+                            <label for="location" class="block text-sm font-medium text-gray-700">Hely</label>
                             <div class="mt-1">
                                 <select id="location" name="location" class="form-multiselect block w-full mt-1">
                                     @foreach (App\Enums\TableLocation::cases() as $location)
