@@ -24,7 +24,7 @@ class TimeBetween implements Rule
         $pickupTime = Carbon::createFromTime($pickupDate->hour, $pickupDate->minute, $pickupDate->second);
         //ha az étterem nyitva van 
 
-        $earliestTime = Carbon::createFromTimeString('17:00:00');
+        $earliestTime = Carbon::createFromTimeString('10:00:00');
         $lastTime = Carbon::createFromTimeString('23:00:00');
 
         return $pickupTime->between($earliestTime, $lastTime) ? true : false ;
@@ -34,6 +34,6 @@ class TimeBetween implements Rule
 
     public function message()
     {
-        return 'A nyitvatartási időn belül válassz időpontot 17:00-23:00.';
+        return 'A nyitvatartási időn belül válassz időpontot 10:00-23:00.';
     }
 }

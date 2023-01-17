@@ -21,11 +21,7 @@ class CategoryController extends Controller
         return view('admin.categories.index' , compact('categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         return view("admin.categories.create");
@@ -41,7 +37,7 @@ class CategoryController extends Controller
             "description" => $request->description,
             "image" => $image
         ]);
-        return to_route('admin.categories.index');
+        return to_route('admin.categories.index')->with('success', 'Kategória sikeresen létrehozva');
     }
 
    
@@ -70,7 +66,7 @@ class CategoryController extends Controller
             "description"=> $request->description,
             "image"=>$image
         ]);
-        return to_route('admin.categories.index');
+        return to_route('admin.categories.index')->with('success', 'Kategória sikeresen frissítve');
     }
 
     
@@ -81,6 +77,6 @@ class CategoryController extends Controller
         Storage::delete($category->image);
         $category->delete();
 
-        return to_route('admin.categories.index');
+        return to_route('admin.categories.index')->with('danger','success', 'Kategória sikeresen törölve');
     }
 }
