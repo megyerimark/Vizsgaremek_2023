@@ -34,6 +34,9 @@
                 <th scope="col" class="px-6 py-3">
                    Vendégek száma
                 </th>
+                <th scope="col" class="px-6 py-3" >
+                   Foglaló neve
+                </th>
                 <th scope="col" class="px-6 py-3">
                     <span class="sr-only">Edit</span>
                 </th>
@@ -61,6 +64,9 @@
                 </td>
                 <td class="px-6 py-4">
                     {{ $reservation->guest_number}}
+                </td>
+                <td class="px-6 py-4">
+                    {{ $reservation->table->name}}
                 </td>
                 
             </tr>

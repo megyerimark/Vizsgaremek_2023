@@ -3,7 +3,7 @@ Ha szeretnéd hogy megjelenjenek a képek , elsőnek nyilvánossá kell hogy ted
 
 php artisan storage:link
 Admin bejelentkezéshez szüksges adatok : 
-email:a@lan.hu
+email:a@lan.hu // amit szeretnél az AdminSeedernél betudod allítani
 jelszó:password
 
 php artisan key:generate
