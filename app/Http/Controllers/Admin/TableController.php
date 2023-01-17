@@ -42,7 +42,7 @@ class TableController extends Controller
             'status'=>$request->status,
 
         ]);
-        return to_route('admin.tables.index');
+        return to_route('admin.tables.index')->with('success', 'Asztal sikeresen tárolva');
     }
 
    
@@ -54,7 +54,7 @@ class TableController extends Controller
     
     public function edit(Table $table)
     {
-        return view('admin.tables.edit',compact("table"));
+        return view('admin.tables.edit',compact("table"))->with('info', 'Asztal sikeresen módosítva');
     }
 
     
@@ -70,7 +70,7 @@ class TableController extends Controller
     {
         $table->reservations()->delete();
         $table->delete();
-        return to_route('admin.tables.index');
+        return to_route('admin.tables.index')->with('danger', 'Asztal sikeresen törölve');
     }
    
     

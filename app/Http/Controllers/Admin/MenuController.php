@@ -42,7 +42,7 @@ class MenuController extends Controller
 
         }
 
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('success', 'Menü sikeresen tárolva');
 
        
 
@@ -83,14 +83,15 @@ class MenuController extends Controller
         if($request->has('categories')){
             $menu->categories()->sync($request->categories);
         }
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('success', 'Menü sikeresen frissítve');
     }
 
     public function destroy(Menu $menu)
     {
         Storage::delete($menu->image);
+        $menu->categories()->detach();
         $menu->delete();
-        return to_route('admin.menus.index');
+        return to_route('admin.menus.index')->with('danger', 'Menü sikeresen törölve');
 
     }
 }

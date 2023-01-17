@@ -8,6 +8,8 @@ use App\Http\Requests\ReservationStoreRequest;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use App\Models\Table;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 
 class ReservationController extends Controller
 {
@@ -28,8 +30,19 @@ class ReservationController extends Controller
    
     public function store(ReservationStoreRequest $request)
     {
-        Reservation::create($request->validated());
+        
+        $table = Table::findOrFail($request->table_id);
+        if($request->guest_number > $table->guest_number){
+            return back()->with('warning', 'Nincs elérhető asztal ennyi vendég számára ');
+        }
+        $request_date = Carbon::parse($request->res_date);
+        foreach($table->reservation as $res){
+            if($res->res_date->format('Y-m-d') == $request_date->format('Y-m-d')){
+                return back()->with('warning', 'Válassz másik asztalt vagy dátumot! ');
+            }
 
+        }
+        Reservation::create($request->validated());
         return to_route('admin.reservation.index');
     }
 

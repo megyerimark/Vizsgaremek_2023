@@ -20,7 +20,7 @@ class Table extends Model
 
     ];
 
-    public function reservations(){
+    public function reservation(){
 
         return $this->hasMany(Reservation::class);
     }
