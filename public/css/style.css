@@ -1,0 +1,386 @@
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+	color: #efefef;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: .3s;
+	list-style: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+body
+{
+	overflow-x: hidden;
+	background: #111111;
+}
+header
+{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to left,rgba(0, 0, 0, .8),rgba(0, 0, 0, .5)),url(img/back-pic.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 4%;
+	padding-top: 2rem;
+}
+header nav
+{
+	width: 100%;
+	height: auto;
+	padding: .5rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header nav img
+{
+	width: 10rem;
+	cursor: pointer;
+}
+header nav div
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header nav button
+{
+	padding: .7rem 1.5rem;
+	cursor: pointer;
+	color: #212121;
+	animation-iteration-count: infinite;
+	animation-delay: 5s;
+}
+header nav button i 
+{
+	color: #cea570;
+}
+header nav button+i 
+{
+	font-size: 2rem;
+	color: #cea570;
+	cursor: pointer;
+	margin-left: 1.5rem;
+}
+
+header .content
+{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 10rem 5rem;
+	text-align: center;
+}
+.sub-heading
+{
+	color: #cea570;
+	font-size: 2.5rem;
+	font-family: 'Nothing You Could Do', cursive;
+	font-weight: 100;
+	animation-delay: .5s;
+}
+.heading
+{
+	font-size: 4.5rem;
+	padding: .5rem 0;
+	animation-delay: 1.25s;
+}
+header .content h4
+{
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: 300;
+	letter-spacing: .2rem;
+	animation-delay: 2.5s;
+}
+header .content h4 span 
+{
+	color: #cea570;
+	font-weight: 700;
+}
+
+.sidenav
+{
+	height: 100%;
+	width: 0px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .95);
+	overflow-x: hidden;
+	padding-top: 6rem;
+	transition: .5s;
+	text-align: center;
+}
+.sidenav a 
+{
+	font-size: 2.3rem;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+	padding: .8rem 0;
+	font-family: 'Nothing You Could Do', cursive;
+}
+.sidenav a:hover
+{
+	color: #cea570;
+}
+.sidenav .closebtn
+{
+	position: absolute;
+	top: .5rem;
+	right: 3.3rem;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+
+
+section
+{
+	padding: 5rem 4%;
+}
+section .heading,section .sub-heading
+{
+	text-align: center;
+}
+.our-story blockquote
+{
+	padding: 1rem 10%;
+	line-height: 1.5;
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: justify;
+}
+.our-story p 
+{
+	padding: 1rem 10%;
+	line-height: 1.5;
+	font-size: 1.2rem;
+	font-weight: 200;
+	text-align: justify;
+}
+::selection
+{
+	background: black;
+}
+
+
+.image-gallery .gallery img
+{
+	width: 24%;
+	cursor: pointer;
+}
+
+
+.team-member
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+	gap: .5rem;
+	margin-top: 3rem;
+}
+.team-member img 
+{
+	margin-bottom: 1rem;
+}
+.team-member h3
+{
+	font-size: 1.5rem;
+	padding: .3rem 0;
+	font-weight: 500;
+	letter-spacing: .1rem;
+}
+.team-member h4
+{
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+
+.philosphy
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.philosphy .content
+{
+	flex-basis: 50%;
+	padding: 2rem 2rem;
+}
+.philosphy .content h3
+{
+	color: #cea570;
+	font-size: 2.5rem;
+	font-family: 'Nothing You Could Do', cursive;
+	font-weight: 100;
+}
+.philosphy .content h2
+{
+	font-size: 3rem;
+	padding: .5rem 0;
+}
+.philosphy .content p 
+{
+	line-height: 1.5;
+}
+.philosphy .image 
+{
+	flex-basis: 50%;
+	text-align: right;
+}
+.philosphy .image img 
+{
+	width: 80%;
+}
+
+
+
+.our-restaurant
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.our-restaurant .image
+{
+	flex-basis: 50%;
+}
+.our-restaurant .image img
+{
+	width: 90%;
+}
+.our-restaurant .content
+{
+	flex-basis: 50%;
+	padding: 2rem 2rem;
+}
+.our-restaurant .content h3
+{
+	color: #cea570;
+	font-size: 2.5rem;
+	font-family: 'Nothing You Could Do', cursive;
+	font-weight: 100;
+}
+.our-restaurant .content h2
+{
+	font-size: 3rem;
+	padding: .5rem 0;
+}
+.our-restaurant .content p 
+{
+	line-height: 1.5;
+}
+
+
+
+.footer-section .footer
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+	text-align: center;
+	gap: .5rem;
+}
+.footer-section .footer img
+{
+	opacity: .5;
+	width: 60%;
+	cursor: pointer;
+}
+.footer-section .footer h3
+{
+	font-weight: 500;
+	padding: .5rem 0;
+}
+.footer-section .footer h4
+{
+	line-height: 1.5;
+	letter-spacing: .1rem;
+	font-weight: 300;
+}
+.footer-section .footer-icon
+{
+	display: flex;
+	justify-content: center;
+	padding: 2rem 0;
+}
+.footer-section .footer-icon ul 
+{
+	display: flex;
+}
+.footer-section .footer-icon ul li i 
+{
+	cursor: pointer;
+	margin: 0 1rem;
+	font-size: 1.5rem;
+}
+.footer-section .footer-icon ul li i:hover
+{
+	color: #cea570;
+}
+
+
+
+
+
+
+@media screen and (max-width: 850px)
+{
+	html
+	{
+		font-size: 90%;
+	}
+	header
+	{
+		height: auto;
+	}
+	section
+	{
+		padding: 2rem 4%;
+	}
+	.image-gallery .gallery img
+	{
+		width: 49%;
+	}
+	.team-member
+	{
+		text-align: center;
+	}
+	.philosphy
+	{
+		display: block;
+		text-align: center;
+	}
+	.philosphy .image 
+	{
+		text-align: center;
+		padding-top: 2rem;
+	}
+	.our-restaurant
+	{
+		display: block;
+		text-align: center;
+	}
+
+}
+
+
+@media screen and (max-width: 600px)
+{
+	html
+	{
+		font-size: 80%;
+	}
+	header .content h4 span
+	{
+		display: block;
+	}
+
+}
