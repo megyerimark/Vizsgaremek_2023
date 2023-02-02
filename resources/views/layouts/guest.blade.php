@@ -19,13 +19,23 @@
 </head>
 
 <body>
-    <div class="bg-white shadow-md" x-data="{ isOpen: false }">
+    <div class="bg-gray-800 shadow-md" x-data="{ isOpen: false }">
         <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
                 <a class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-green-400"
-                    href="#">
-                    Dentre
-                </a>
+                    href="/"
+                    
+><img src="img/logo.png " class="img">
+<style>
+    .img
+{
+	width: 24%;
+	cursor: pointer;
+}
+
+    
+</style>
+</a>
                 <!-- Mobile menu button -->
                 <div @click="isOpen = !isOpen" class="flex md:hidden">
                     <button type="button"
@@ -40,17 +50,18 @@
                 </div>
             </div>
 
-            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-            <div :class="isOpen ? 'flex' : 'hidden'"
+          
+            <div
+             :class="isOpen ? 'flex' : 'hidden'"
                 class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                    href="/">Home</a>
+                    href="/">Főoldal</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
                     href="{{ route('categories.index') }}">Kategóriák</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
                     href="{{ route('menus.index') }}">Menük</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                    href="{{ route('reservations.step.one') }}">Foglalj most!</a>
+                    href="{{ route('reservation.step.one') }}">Foglalj most!</a>
 
             </div>
         </nav>

@@ -1,3 +1,4 @@
+<x-guest-layout>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +25,12 @@
 	
 	<header>
 		<nav>
-			<img src="img/logo.png">
+			
 
-			<div>
-				<a href="{{route('admin.reservation.create')}}"><button class=""><i class=''></i> Foglalás</button></a>
+			<!-- <div>
 
 				<i class='bx bx-menu-alt-left' onclick="openNav()"></i>
-			</div>
+			</div> -->
 		</nav>
 
 		<div class="content">
@@ -41,13 +41,12 @@
 			</div>
 		</div>
 
-		<div id="mySidenav" class="sidenav">
+		<!-- <div id="mySidenav" class="sidenav">
 			<a href="#" class="closebtn" onclick="closeNav()"><i class='bx bx-x'></i></a>
 			<a href="#">Főoldal</a>
 			<a href="#">Menü</a>
 			<a href="#">Rólunk</a>
-			<a href="#">Kontakt</a>
-		</div>
+		</div> -->
 	</header>
 	
 
@@ -178,3 +177,6 @@
 <link rel="stylesheet" href="css/style.css">
 
 </html>
+</x-guest-layout>
+
+
