@@ -20,15 +20,17 @@
                             <form method="POST" action="{{ route('reservation.store.step.two') }}">
                                 @csrf
                                 <div class="sm:col-span-6 pt-5">
-                                    <label for="status" class="block text-sm font-medium text-gray-700">Asztal</label>
+                                    <label for="status" class="block text-sm font-medium text-gray-700"><strong> Asztal neve | Elhelyeszkedése | Vendégek száma</strong> </label>
                                     <div class="mt-1">
                                         <select id="table_id" name="table_id"
                                             class="form-multiselect block w-full mt-1">
                                             @foreach ($tables as $table)
                                                 <option value="{{ $table->id }}" @selected($table->id == $reservation->table_id)>
                                                     {{ $table->name }}
+                                                    {{ $table->location->name }}
                                                     ({{ $table->guest_number }} Maximális vendégek száma)
                                                 </option>
+                                                
                                             @endforeach
                                         </select>
                                     </div>

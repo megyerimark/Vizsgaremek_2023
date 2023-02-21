@@ -4,7 +4,8 @@
           <h1>Köszi a rendelést</h1>
           <p>A foglalásod készen áll!</p>
 
-          <img src="img/koszi.gif" alt="">
+          {{-- <img src="img/koszi.gif" alt=""> --}}
+          <img src="img/yas.gif" alt="">
     </div>
     </div>
 </x-guest-layout>

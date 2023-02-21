@@ -68,7 +68,7 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
-                                    <label for="res_date" class="block text-sm font-medium text-gray-700"> Dátum
+                                    <label for="res_date" class="block text-sm font-medium text-gray-700"> Dátum <sup>vasárnap is nyitva</sup>
 
                                     </label>
                                     <div class="mt-1">
@@ -78,23 +78,21 @@
                                             value="{{ $reservation ? $reservation->res_date->format('Y-m-d\TH:i:s') : '' }}"
                                             class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                                     </div>
-                                    <span class="text-xs">kérlek a nyitvatartási időben válassz időt 17:00-23:00.</span>
+                                    <strong class="text-xs">kérlek a nyitvatartási időben válassz időt 17:00-23:00.</strong>
                                     @error('res_date')
                                     <div class="text-sm text-red-400">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
-                                    <label for="guest_number" class="block text-sm font-medium text-gray-700">vendékeg
-                                        száma
-
-                                       
-                    
-                                        <strong style="color:red">Ha a tovább gombra nyomva nem jelenik meg az asztal, akkor túl sok vendég számot adtál meg ,kérlek adj megy kissebb mennyiségű vendég számot</strong>
-                                    <div class="mt-1">
+                                   <label for="guest_number" class="block text-sm font-medium text-gray-700">
+                                    <strong>Vendégek Száma</strong>
+                                    <sup>számban értendő</sup>
+                                     <div class="mt-1">
                                         <input type="number" id="guest_number" name="guest_number"
                                             value="{{ $reservation->guest_number ?? '' }}"
                                             class="block w-full appearance-none bg-white border border-gray-400 rounded-md py-2 px-3 text-base leading-normal transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                                     </div>
+                                    <small style="color:red">Ha a következő gombra nyomva nem jelenik meg az asztal, akkor túl sok vendég számot adtál meg!<strong>Kérlek adj megy kissebb mennyiségű vendég számot</strong></small>
                                     @error('guest_number')
                                     <div class="text-sm text-red-400">{{ $message }}</div>
                                     @enderror
