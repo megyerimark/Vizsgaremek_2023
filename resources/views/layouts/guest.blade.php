@@ -19,10 +19,10 @@
 </head>
 
 <body>
-    <div class="bg-red-100" x-data="{ isOpen: false }">
+    <div class="bg-indigo-50 x-data="{ isOpen: false }">
         <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
-                <a class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-green-400"
+                <a class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-indigo-700"
                     href="/"><img src="img/logo.png " class="img">
                     <style>
                     .img {
@@ -48,44 +48,39 @@
 
             <div :class="isOpen ? 'flex' : 'hidden'"
                 class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
+                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"
                     href="/">Főoldal</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
+                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
                     href="{{ route('categories.index') }}">Kategóriák</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
-                 href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Bejelentkezés</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400" class="sub-heading"
+                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
+                 href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Bejelentkezés</a>
+                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 " class="sub-heading"
                     href="{{ route('menus.index') }}">Menük</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 hover:text-green-400"
+                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
                     href="{{ route('reservation.step-one') }}">Foglalj most!</a>
 
             </div>
         </nav>
     </div>
-    <div class="font-sans text-gray-900 antialiased min-h-screen">
+    <div class="font-sans text-gray-500 antialiased min-h-screen">
         {{ $slot }}
     </div>
 
-    <footer  class="bg-red-100 border-t border-red-100 text-center ">
+    <footer  class="bg-slate-100 border-t border-red-100 text-center ">
         <div class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between">
             <div class="flex flex-wrap justify-center">
-                <ul  class="flex items-center space-x-4 ">
-                    <ul style=color:red>Design by:</ul>
+                <ul  class="flex items-center space-x-4">
+                    <ul style=color:gray >Design by:</ul>
                     <ul>
-                        <li style=color:blue>Orosz Levente János</li>
+                        <li  style=color:gray>Orosz Levente János</li>
+                    </ul>
+                    <ul >
+                        <li style=color:gray>Bognár Dávid Márk</li>
                     </ul>
                     <ul>
-                        <li style=color:red>Bognár Dávid Márk</li>
+                        <li style=color:gray>Megyeri Márk Máté</li>
                     </ul>
-                    <ul>
-                        <li style=color:red>Megyeri Márk Máté</li>
-                    </ul>
-                    <ul>
-                        <li style=color:red><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
-                          <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
-                        </svg></li>
-                    </ul>
-
+                    <p style=color:gray>&copy; 2023 www.dentre.com</p>
                 </ul>
             </div>
             <!-- <div class="flex justify-center  lg:mt-0">

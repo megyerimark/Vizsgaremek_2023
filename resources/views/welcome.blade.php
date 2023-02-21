@@ -101,7 +101,7 @@
 
 	<section class="our-restaurant">
 		<div class="image">
-			<img src="img/intro-2.jpg">
+			<img src="img/back-pic.png">
 		</div>
 
 		<div class="content">
@@ -149,7 +149,10 @@
 		<div class="footer-icon">
 			<ul>
 				<li><i class='bx bxl-facebook'></i></li>
+				
 				<li><i class='bx bxl-instagram'></i></li>
+				<li><i class='bx bxl-copyright'></i></li>
+				
 			</ul>
 		</div>
 

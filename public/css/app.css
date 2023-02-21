@@ -1294,6 +1294,8 @@ select {
     background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
 
+
+
 .bg-gray-100 {
     --tw-bg-opacity: 1;
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1341,7 +1343,7 @@ select {
     --tw-gradient-from: blue;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(66, 224, 124, 0));
 }
-/* Átmenet a szövegben  */
+/* Átmenet a szövegben */
 .to-blue-500 {
     --tw-gradient-to: red;
 }
@@ -1896,6 +1898,11 @@ select {
     --tw-bg-opacity: 1;
     background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
+.hover\:bg-yellow-400:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
 
 .hover\:bg-green-700:hover {
     --tw-bg-opacity: 1;
