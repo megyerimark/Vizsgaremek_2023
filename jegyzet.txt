@@ -7,3 +7,8 @@ email:a@lan.hu // amit szeretnél az AdminSeedernél betudod allítani
 jelszó:password
 
 php artisan key:generate
+
+
+
+
+

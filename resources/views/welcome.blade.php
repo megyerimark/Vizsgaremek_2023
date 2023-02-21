@@ -37,11 +37,12 @@
 			<div>
 				<h3 class="sub-heading animate__animated animate__fadeInDown">A legjobb</h3>
 				<h1 class="heading animate__animated animate__fadeInDown">Budapesti étterem</h1>
-				<h4 class="animate__animated animate__fadeInDown">Foglaljon online, vagy hívjon minket <span>(06 1) 123 4567</span></h4>
+				<h4 class="animate__animated animate__fadeInDown">Foglaljon online, vagy hívjon minket <span>(06 40) 50 50 50</span></h4>
+				<a href="{{route('reservation.step-one')}}" type="button" class="sub-heading animate__animated animate__fadeInDown"> Foglalj most </a>
 			</div>
 		</div>
-
-		<!-- <div id="mySidenav" class="sidenav">
+<!-- 
+		<div id="mySidenav" class="sidenav">
 			<a href="#" class="closebtn" onclick="closeNav()"><i class='bx bx-x'></i></a>
 			<a href="#">Főoldal</a>
 			<a href="#">Menü</a>
@@ -67,17 +68,12 @@
 	
 
 	<section class="image-gallery">
-		<h3 class="sub-heading">Ételeink</h3>
+		<a href="{{route('menus.index')}}">
+			<h3 class="sub-heading">Menüink</h3>
+		</a>
 
 		<div class="gallery">
-			<img src="img/kaja1.jpg">
-			<img src="img/kaja2.jpg">
-			<img src="img/kaja3.jpg">
-			<img src="img/kaja4.jpg">
-			<img src="img/kaja5.jpg">
-			<img src="img/kaja6.jpg">
-			<img src="img/kaja7.jpg">
-			<img src="img/kaja8.jpg">
+			
 		</div>
 	</section>
 
