@@ -15,18 +15,9 @@
 body
 {
 	overflow-x: hidden;
-	background: #2F234B;
+	background: #0f0f0f;
 }
-header
-{
-	width: 100%;
-	height: 100vh;
-	background-image:url("img/back-pic.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding: 0 4%;
-	padding-top: 2rem;
-}
+
 header nav
 {
 	width: 100%;
@@ -91,6 +82,7 @@ header .content
 }
 header .content h4
 {
+	text-decoration: double;
 	font-size: 1.5rem;
 	font-style: italic;
 	font-weight: 300;
@@ -103,41 +95,7 @@ header .content h4 span
 	font-weight: 700;
 }
 
-.sidenav
-{
-	height: 100%;
-	width: 0px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	right: 0;
-	background: rgba(0, 0, 0, .95);
-	overflow-x: hidden;
-	padding-top: 6rem;
-	transition: .5s;
-	text-align: center;
-}
-.sidenav a 
-{
-	font-size: 2.3rem;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-	padding: .8rem 0;
-	font-family: 'Nothing You Could Do', cursive;
-}
-.sidenav a:hover
-{
-	color: #cea570;
-}
-.sidenav .closebtn
-{
-	position: absolute;
-	top: .5rem;
-	right: 3.3rem;
-	font-size: 2rem;
-	cursor: pointer;
-}
+
 
 
 

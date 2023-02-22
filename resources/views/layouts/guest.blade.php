@@ -19,11 +19,11 @@
 </head>
 
 <body>
-    <div class="bg-indigo-50 x-data="{ isOpen: false }">
+    <div class="bg-yellow-500 x-data="{ isOpen: false }">
         <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
                 <a class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-indigo-700"
-                    href="/"><img src="img/logo.png " class="img">
+                    href="/"><img src="{{asset('img/logo.png')}}" class="img">
                     <style>
                     .img {
                         width: 50%;
@@ -72,16 +72,19 @@
                 <ul  class="flex items-center space-x-4">
                     <ul style=color:gray >Design by:</ul>
                     <ul>
-                        <li  style=color:gray>Orosz Levente János</li>
+                        <li  style=color:gray>Orosz Levente János &radic;</li>
                     </ul>
                     <ul >
-                        <li style=color:gray>Bognár Dávid Márk</li>
+                        <li style=color:gray>Bognár Dávid Márk &radic;</li>
                     </ul>
                     <ul>
-                        <li style=color:gray>Megyeri Márk Máté</li>
+                        <li style=color:gray>Megyeri Márk Máté &radic;</li>
                     </ul>
-                    <p style=color:gray>&copy; 2023 www.dentre.com</p>
+                    <strong>
+                        <p style=color:gray>&copy; 2023 www.dentre.com</p>
+                    </strong>
                 </ul>
+        
             </div>
             <!-- <div class="flex justify-center  lg:mt-0">
                 <a>

@@ -24,6 +24,17 @@
 <body>
 	
 	<header>
+		<style>
+			header{
+ background-image: url('{{ asset('img/IMG-1222.jpg') }}');
+ width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 4%;
+	padding-top: 2rem;
+			}
+		</style>
 		<nav>
 			
 
@@ -37,17 +48,13 @@
 			<div>
 				<h3 class="sub-heading animate__animated animate__fadeInDown">A legjobb</h3>
 				<h1 class="heading animate__animated animate__fadeInDown">Budapesti étterem</h1>
-				<h4 class="animate__animated animate__fadeInDown">Foglaljon online, vagy hívjon minket <span>(06 40) 50 50 50</span></h4>
+					<h4 class="animate__animated animate__fadeInDown">Foglaljon online, vagy hívjon minket <span>(06 40) 50 50 50</span></h4>
+	
 				<a href="{{route('reservation.step-one')}}" type="button" class="sub-heading animate__animated animate__fadeInDown"> Foglalj most </a>
 			</div>
 		</div>
-<!-- 
-		<div id="mySidenav" class="sidenav">
-			<a href="#" class="closebtn" onclick="closeNav()"><i class='bx bx-x'></i></a>
-			<a href="#">Főoldal</a>
-			<a href="#">Menü</a>
-			<a href="#">Rólunk</a>
-		</div> -->
+		<img src="">
+
 	</header>
 	
 
@@ -58,7 +65,9 @@
 			<h1 class="heading">A kezdet</h1>
 		</div>
 
-		<blockquote>“A Budapest Bistro Budapest nyüzsgő, élettel és energiával teli negyedében, a Vigadó tér 5. szám alatt nyílt meg.”</blockquote>
+		<strong>
+			<blockquote>“A Budapest Bistro Budapest nyüzsgő, élettel és energiával teli negyedében, a Vigadó tér 5. szám alatt nyílt meg.”</blockquote>
+		</strong>
 
 		<p>A teljesen felújított, modern és hangulatos bár az élőzenés éjjeli bárokat kedvelők pesti zarándokhelye. Ám, a Budapest Bistro több, mint egy étterem, ahol a kezedben egy itallal hallgatod a zongoristát, a hegedűst, dúdolod az ismert és kedvelt melódiákat és ahol vörös rózsával szerelmet vallhatsz kedvesednek. A Budapest Bistro vacsorázó hely is, ahol a betérő vendégek megtalálhatják a kedvükre való finom falatokat a hozzá illő italokkal. Vacsorával, vagy anélkül, egyedül, vagy párban, társasággal, a Budapest Bistro Hétfőtől-Szombatig élményt kínál.</p>
 	</section>
@@ -173,7 +182,7 @@
 	</script>
 </body>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 </html>
 </x-guest-layout>
