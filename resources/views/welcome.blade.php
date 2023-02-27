@@ -110,7 +110,7 @@
 
 	<section class="our-restaurant">
 		<div class="image">
-			<img src="img/back-pic.png">
+			<div class="mapouter"><div class="gmap_canvas"><iframe width="437" height="395" id="gmap_canvas" src="https://maps.google.com/maps?q=K%C3%BClkereskedelmi%20Technikum&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:395px;width:437px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:395px;width:437px;}</style></div></div>
 		</div>
 
 		<div class="content">
@@ -131,10 +131,6 @@
 
 	<section class="footer-section">
 		<div class="footer">
-			<div>
-				<img src="img/logo.png">
-			</div>
-
 			<div>
 				<h3>Jöjjön el hozzánk</h3>
 				<h4>1105 Vigadó tér,<br> Budapest

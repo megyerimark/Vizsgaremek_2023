@@ -17,6 +17,11 @@ body
 	overflow-x: hidden;
 	background: #0f0f0f;
 }
+.content{
+	align-items: right;
+	justify-content: right;
+	position: right;
+}
 
 header nav
 {
@@ -326,6 +331,12 @@ section .heading,section .sub-heading
 		display: block;
 		text-align: center;
 	}
+	.content{
+		position: left;
+		align-items: left;
+		justify-content: left;
+	}
+
 
 }
 
@@ -339,6 +350,15 @@ section .heading,section .sub-heading
 	header .content h4 span
 	{
 		display: block;
+	}
+
+}
+
+@media screen and (max-width: 400)
+{
+	.content{
+		align-items: center;
+		justify-content: center;
 	}
 
 }

@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
 Route::get("/kategóriák",[FrontendCategoryController::class,'index'])->name('categories.index');
 Route::get("/kategóriák/{category}",[FrontendCategoryController::class,'index'])->name('categories.show.index');
 Route::get("/menük",[FrontendMenuController::class,'index'])->name('menus.index');
+
 Route::get("/reservation/elso-lepes",[FrontendReservationController::class,'stepOne'])->name('reservation.step-one');
 Route::post("/reservation/elso-lepes",[FrontendReservationController::class,'storeStepOne'])->name('reservation.store.step.one');
 Route::get("/reservation/masodik-lepes",[FrontendReservationController::class,'stepTwo'])->name('reservation.step-two');
@@ -52,3 +53,7 @@ Route::middleware(["auth", "admin"])->name('admin.')->prefix('admin')->group(fun
 });
 
 require __DIR__.'/auth.php';
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

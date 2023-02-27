@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
+    @vite('resources/js/app.js')
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                     </style>
                 </a>
                 <!-- Mobile menu button -->
-                <div @click="isOpen = !isOpen" class="flex md:hidden">
+                {{-- <div @click="isOpen = !isOpen" class="flex md:hidden">
                     <button type="button"
                         class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
                         aria-label="toggle menu">
@@ -43,7 +44,7 @@
                         </svg>
                     </button>
                 </div>
-            </div>
+            </div> --}}
 
 
             <div :class="isOpen ? 'flex' : 'hidden'"
@@ -52,8 +53,6 @@
                     href="/">Főoldal</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
                     href="{{ route('categories.index') }}">Kategóriák</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
-                 href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Bejelentkezés</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 " class="sub-heading"
                     href="{{ route('menus.index') }}">Menük</a>
                 <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "

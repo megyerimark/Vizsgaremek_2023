@@ -12,5 +12,7 @@ class MenuController extends Controller
         $menus =Menu::all();
 
         return view('menus.index', compact('menus'));
+        
     }
+
 }
