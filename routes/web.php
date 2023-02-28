@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
 //Frontend
 
 Route::get("/kategóriák",[FrontendCategoryController::class,'index'])->name('categories.index');
-Route::get("/kategóriák/{category}",[FrontendCategoryController::class,'index'])->name('categories.show.index');
+Route::get("/kategóriák/{category}",[FrontendCategoryController::class,'index'])->name('categories.show.index'); // nem működik
 Route::get("/menük",[FrontendMenuController::class,'index'])->name('menus.index');
 
 Route::get("/reservation/elso-lepes",[FrontendReservationController::class,'stepOne'])->name('reservation.step-one');

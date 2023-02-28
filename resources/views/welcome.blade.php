@@ -43,8 +43,8 @@
 
 		<div class="content">
 			<div>
-				<h3 class="sub-heading animate__animated animate__fadeInDown">A legjobb</h3>
-				<h1 class="heading animate__animated animate__fadeInDown">Budapesti étterem</h1>
+				<h3 class="animate__animated aanimate__lightSpeedInRight">A legjobb</h3>
+				<h1 class="animate__animated animate__bounce">Budapesti étterem</h1>
 					<h4 class="animate__animated animate__fadeInDown">Foglaljon online, vagy hívjon minket <span>(06 40) 50 50 50</span></h4>
 	
 				<a href="{{route('reservation.step-one')}}" type="button" class="sub-heading animate__animated animate__fadeInDown"> Foglalj most </a>
@@ -59,7 +59,7 @@
 	<section class="our-story">
 		<div class="banner">
 			<h3 class="sub-heading">Rólunk</h3>
-			<h1 class="heading">A kezdet</h1>
+			<h1 class="heading animate__animated animate__lightSpeedInRight">A kezdet</h1>
 		</div>
 
 		<strong>

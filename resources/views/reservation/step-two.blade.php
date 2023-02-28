@@ -6,6 +6,10 @@
                     <div class="h-32 md:h-auto md:w-1/2">
                         <img class="object-cover w-full h-full"
                             src="https://thebettervacation.com/wp-content/uploads/2021/06/Eiffel-Tower-restaurant-in-Paris-1024x576.webp" alt="img" />
+                            <link
+                            rel="stylesheet"
+                            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+                          />
                     </div>
                     <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                         <div class="w-full">
@@ -20,7 +24,7 @@
                             <form method="POST" action="{{ route('reservation.store.step.two') }}">
                                 @csrf
                                 <div class="sm:col-span-6 pt-5">
-                                    <label for="status" class="block text-sm font-medium text-gray-700"><strong> Asztal neve | Elhelyeszkedése | Vendégek száma</strong> </label>
+                                    <label for="status" class="animate__animated  animate__fadeInLeft"><strong> Asztal neve | Elhelyeszkedése | Vendégek száma</strong> </label>
                                     <div class="mt-1">
                                         <select id="table_id" name="table_id"
                                             class="form-multiselect block w-full mt-1">
@@ -41,9 +45,9 @@
 
                                 <div class="mt-6 p-4 flex justify-between">
                                     <a href="{{ route('reservation.step-one') }}"
-                                        class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">Vissza</a>
+                                        class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white animate__animated  animate__fadeInLeft">Vissza</a>
                                     <button type="submit"
-                                        class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">Foglalás
+                                        class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white animate__animated  animate__fadeInTopRight">Foglalás
                                         </button>
                                 </div>
                             </form>
