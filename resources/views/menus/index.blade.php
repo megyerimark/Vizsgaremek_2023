@@ -4,7 +4,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <div class="container w-full px-5 py-6 mx-auto">
-        <div class="grid lg:grid-cols-4 gap-y-6">
+        <div class="grid lg:grid-cols-4 gap-y-6 animate__animated animate__flip">
             @foreach ($menus as $menu)
             <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg py-30 px-20">
                 <img src="{{Storage::url($menu->image)}}" alt="Image" />
