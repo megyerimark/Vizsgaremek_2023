@@ -53,8 +53,19 @@
             </div>
         </nav> --}}
         <nav class="navbar navbar-expand-lg navbar-dark bg-blue-300">
+            
             <div class="container-fluid">
-              <a class="navbar-brand" href="/">Dentre</a>
+              <a class="navbar-brand"
+                 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-indigo-700"
+                href="/"><img src="{{asset('img/logo.png')}}" class="img">
+                <style>
+                .img {
+                    width: 50%;
+                    cursor: pointer;
+                }
+                </style>
+              </a>
+        
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
