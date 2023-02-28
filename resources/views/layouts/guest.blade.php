@@ -13,7 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     @vite('resources/js/app.js')
@@ -21,8 +21,8 @@
 
 <body>
     <div class="bg-yellow-500 x-data="{ isOpen: false }">
-        <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
-            <div class="flex items-center justify-between">
+        {{-- <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center"> --}}
+            {{-- <div class="flex items-center justify-between">
                 <a class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-indigo-700"
                     href="/"><img src="{{asset('img/logo.png')}}" class="img">
                     <style>
@@ -33,18 +33,10 @@
                     </style>
                 </a>
                 <!-- Mobile menu button -->
-                {{-- <div @click="isOpen = !isOpen" class="flex md:hidden">
-                    <button type="button"
-                        class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-                        aria-label="toggle menu">
-                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                            <path fill-rule="evenodd"
-                                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-                            </path>
-                        </svg>
-                    </button>
+                <div @click="isOpen = !isOpen" class="flex md:hidden">
+    
                 </div>
-            </div> --}}
+            </div>
 
 
             <div :class="isOpen ? 'flex' : 'hidden'"
@@ -59,7 +51,30 @@
                     href="{{ route('reservation.step-one') }}">Foglalj most!</a>
 
             </div>
-        </nav>
+        </nav> --}}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-blue-300">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">Dentre</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-center" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('categories.index') }}">Kategóriák</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('menus.index') }}">Menük</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('reservation.step-one') }}">Foglalj most</a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+
     </div>
     <div class="font-sans text-gray-500 antialiased min-h-screen">
         {{ $slot }}
@@ -93,6 +108,7 @@
                     </svg>
                 </a> -->
     </footer>
+
 
 </body>
 

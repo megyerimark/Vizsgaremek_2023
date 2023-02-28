@@ -1,3 +1,7 @@
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@charset "UTF-8";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 *,
 ::before,
 ::after {
@@ -112,6 +116,7 @@ sup {
 sub {
     bottom: -0.25em;
 }
+
 
 sup {
     top: -0.5em;
@@ -1213,6 +1218,9 @@ select {
 
 .border-b-2 {
     border-bottom-width: 2px;
+}
+.bg-blue-300{
+    background-color: #1B365F   !important;
 }
 
 .border-gray-300 {

@@ -4,10 +4,12 @@
         <div class="grid lg:grid-cols-4 gap-y-6">
             
           <h1 class="sub-heading animate__animated animate__fadeInDown">Köszi a rendelést</h1>
-          <p >A foglalásod készen áll!</p>
+          <br>
     
-          <img src="img/yas.gif" alt="" class="heading animate__animated animate__fadeInDown">
-          <img src="img/IMG-1222.JPG" alt="dorina" class="animate__animated animate__fadeInDown" width="200px" height="200px">
+
+          <img src="img/yas.gif" class="img-fluid" alt="...">
+          <img src="img/asd.gif" alt="" class="heading animate__animated animate__fadeInDown"  height="250px">
+        
     </div>
     </div>
     <style>

@@ -26,7 +26,7 @@
 	<header>
 		<style>
 			header{
- background-image: url('{{ asset('img/IMG-1222.jpg') }}');
+ background-image: url('{{ asset('img/paris.jpg') }}');
  width: 100%;
 	height: 100vh;
 	background-size: cover;
@@ -38,10 +38,7 @@
 		<nav>
 			
 
-			<!-- <div>
-
-				<i class='bx bx-menu-alt-left' onclick="openNav()"></i>
-			</div> -->
+			
 		</nav>
 
 		<div class="content">
@@ -66,10 +63,11 @@
 		</div>
 
 		<strong>
-			<blockquote>“A Budapest Bistro Budapest nyüzsgő, élettel és energiával teli negyedében, a Vigadó tér 5. szám alatt nyílt meg.”</blockquote>
+			<blockquote>“A Dentre Bistro Budapest nyüzsgő, élettel és energiával teli negyedében, a(z) 1065 Révay Utca 16.
+				Budapest szám alatt nyílt meg.”</blockquote>
 		</strong>
 
-		<p>A teljesen felújított, modern és hangulatos bár az élőzenés éjjeli bárokat kedvelők pesti zarándokhelye. Ám, a Budapest Bistro több, mint egy étterem, ahol a kezedben egy itallal hallgatod a zongoristát, a hegedűst, dúdolod az ismert és kedvelt melódiákat és ahol vörös rózsával szerelmet vallhatsz kedvesednek. A Budapest Bistro vacsorázó hely is, ahol a betérő vendégek megtalálhatják a kedvükre való finom falatokat a hozzá illő italokkal. Vacsorával, vagy anélkül, egyedül, vagy párban, társasággal, a Budapest Bistro Hétfőtől-Szombatig élményt kínál.</p>
+		<p>A teljesen felújított, modern és hangulatos bár az élőzenés éjjeli bárokat kedvelők pesti zarándokhelye. Ám, a Dentre Bistro több, mint egy étterem, ahol a kezedben egy itallal hallgatod a zongoristát, a hegedűst, dúdolod az ismert és kedvelt melódiákat és ahol vörös rózsával szerelmet vallhatsz kedvesednek. A Budapest Bistro vacsorázó hely is, ahol a betérő vendégek megtalálhatják a kedvükre való finom falatokat a hozzá illő italokkal. Vacsorával, vagy anélkül, egyedül, vagy párban, társasággal, a Dentre Bistro Hétfőtől-Vasárnapig élményt kínál.</p>
 	</section>
 	
 
@@ -133,14 +131,14 @@
 		<div class="footer">
 			<div>
 				<h3>Jöjjön el hozzánk</h3>
-				<h4>1105 Vigadó tér,<br> Budapest
+				<h4>1065 Révay utca 16.<br> Budapest
 					<br>
 				</h4>
 			</div>
 
 			<div>
 				<h3>Foglalás</h3>
-				<h4>(06 1) 123 4567 <br> Foglaljon most</h4>
+				<h4>(06 1) 123 4567 <br><a href="{{route('reservation.step-one')}}"> Foglaljon most</a></h4>
 			</div>
 
 			<div>
@@ -153,7 +151,9 @@
 
 		<div class="footer-icon">
 			<ul>
-				<li><i class='bx bxl-facebook'></i></li>
+				<a href="https://www.facebook.com/kulkergimi/?locale=hu_HU">
+					<li><i class='bx bxl-facebook'></i></li>
+				</a>
 				
 				<li><i class='bx bxl-instagram'></i></li>
 				<li><i class='bx bxl-copyright'></i></li>
