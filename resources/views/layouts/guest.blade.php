@@ -20,47 +20,33 @@
 </head>
 
 <body>
-    <div class="bg-yellow-500 x-data="{ isOpen: false }">
-        {{-- <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center"> --}}
-            {{-- <div class="flex items-center justify-between">
-                <a class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-2xl hover:text-indigo-700"
-                    href="/"><img src="{{asset('img/logo.png')}}" class="img">
-                    <style>
-                    .img {
-                        width: 50%;
-                        cursor: pointer;
-                    }
-                    </style>
-                </a>
-                <!-- Mobile menu button -->
-                <div @click="isOpen = !isOpen" class="flex md:hidden">
     
-                </div>
-            </div>
-
-
-            <div :class="isOpen ? 'flex' : 'hidden'"
-                class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"
-                    href="/">Főoldal</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
-                    href="{{ route('categories.index') }}">Kategóriák</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 " class="sub-heading"
-                    href="{{ route('menus.index') }}">Menük</a>
-                <a class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 "
-                    href="{{ route('reservation.step-one') }}">Foglalj most!</a>
-
-            </div>
-        </nav> --}}
-        <nav class="navbar navbar-expand-lg navbar-dark bg-blue-300">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-blue-300" id="asd">
             
             <div class="container-fluid">
               <a class="navbar-brand"
-                href="/"><img src="{{asset('img/logo.png')}}" class="img">
+                href="/"><img src="{{asset('img/Uno.jpg')}}" class="img">
                 <style>
                 .img {
-                    width: 50%;
+                    width: 125px;
+                    border-radius: 25px;
                     cursor: pointer;
+                    box-shadow: 0px 0px 25px
+                }
+                #a,#b,#c{
+                  box-shadow: 0px 0px 25px;
+                  border-radius: 50px;
+                  align-items: center;
+                  text-align: center;
+                  width: 500px
+                }
+                @media screen and (max-width: 1250px)
+                {
+
+                    #a,#b,#c{
+                        width: 250px
+                    }
+                    
                 }
                 </style>
               </a>
@@ -71,13 +57,13 @@
               <div class="collapse navbar-collapse justify-center" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('categories.index') }}">Kategóriák</a>
+                    <a class="nav-link" id="b" aria-current="page" href="{{ route('categories.index') }}">Kategóriák</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('menus.index') }}">Menük</a>
+                    <a class="nav-link" id="a" href="{{ route('menus.index') }}">Menük</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('reservation.step-one') }}">Foglalj most</a>
+                    <a class="nav-link"  id="c" href="{{ route('reservation.step-one') }}">Foglalj most</a>
                   </li>
 
                 </ul>
@@ -86,7 +72,7 @@
           </nav>
 
     </div>
-    <div class="font-sans text-gray-500 antialiased min-h-screen">
+    <div class="font-sans text-gray-500 antialiased">
         {{ $slot }}
     </div>
 
@@ -96,17 +82,16 @@
                 <ul  class="flex items-center space-x-4">
                     <ul style=color:gray >Design by:</ul>
                     <ul>
-                        <li  style=color:gray>Orosz Levente János &radic;</li>
+                        <li  style=color:gray>Orosz  &radic;</li>
                     </ul>
                     <ul >
-                        <li style=color:gray>Bognár Dávid Márk &radic;</li>
+                        <li style=color:gray>Bognár  &radic;</li>
                     </ul>
                     <ul>
-                        <li style=color:gray>Megyeri Márk Máté &radic;</li>
+                        <li style=color:gray>Megyeri  &radic;</li>
                     </ul>
-                    <strong>
-                        <p style=color:gray>&copy; 2023 www.dentre.com</p>
-                    </strong>
+                
+                    
                 </ul>
         
             </div>
@@ -115,9 +100,7 @@
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         class="w-6 h-6 text-blue-600" viewBox="0 0 24 24">
                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                </a> -->
-    </footer>
+                    </svg>n
 
 
 </body>
