@@ -40,6 +40,9 @@
                 <x-admin-nav-link :href="route('admin.reservation.index')" :active="request()->routeIs('admin.reservation.index')">
                     {{ __('Foglalások') }}
                 </x-admin-nav-link>
+                <x-admin-nav-link :href="route('admin.comments.index')" :active="request()->routeIs('admin.reservation.index')">
+                    {{ __('Megjegyzések') }}
+                </x-admin-nav-link>
 
 
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">

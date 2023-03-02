@@ -9,15 +9,15 @@
 
 
             @foreach ($menus as $menu)
-            <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header bg-transparent border-success">{{$menu->price}}</div>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-transparent border-primary">{{$menu->price}} FT</div>
                 <div class="card-body text-success">
                   <h5 class="card-title">
                     <img src="{{Storage::url($menu->image)}}" alt="">
                   </h5>
                   <p class="card-text">{{$menu->description}}</p>
                 </div>
-                <div class="card-footer bg-transparent border-success">{{$menu->name}}</div>
+                <div class="card-footer bg-transparent border-primary">{{$menu->name}}</div>
               </div>
 
               @endforeach

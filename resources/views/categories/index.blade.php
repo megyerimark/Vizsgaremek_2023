@@ -11,14 +11,15 @@
            
 
             <div class="card border-success mb-3" style="max-width: 18rem;">
-                <div class="card-header bg-transparent border-success">Header</div>
+                <div class="card-header bg-transparent border-success"></div>
                 <div class="card-body text-success">
-                  <h5 class="card-title">{{$category->name}}</h5>
                   <p class="card-text">
                     <img src="{{Storage::url($category->image)}}" alt="Image"/>
                   </p>
                 </div>
-                <div class="card-footer bg-transparent border-success">{{$category->description}}</div>
+                <a href="{{route('categories.show.index', $category->id)}}">
+                  <div class="card-footer bg-transparent border-success">{{$category->description}}</div>
+                </a>
               </div>
 
               @endforeach

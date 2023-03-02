@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\TableController;
@@ -32,7 +33,7 @@ Route::middleware('auth')->group(function () {
 //Frontend
 
 Route::get("/kategóriák",[FrontendCategoryController::class,'index'])->name('categories.index');
-Route::get("/kategóriák/{category}",[FrontendCategoryController::class,'index'])->name('categories.show.index'); // nem működik
+Route::get("/kategoriák{category}",[FrontendCategoryController::class,'show'])->name('categories.show.index'); // nem működik
 Route::get("/menük",[FrontendMenuController::class,'index'])->name('menus.index');
 
 Route::get("/reservation/elso-lepes",[FrontendReservationController::class,'stepOne'])->name('reservation.step-one');
@@ -41,12 +42,12 @@ Route::get("/reservation/masodik-lepes",[FrontendReservationController::class,'s
 Route::post("/reservation/masodik-lepes",[FrontendReservationController::class,'storeStepTwo'])->name('reservation.store.step.two');
 Route::get('/koszi_a_rendelesed',[FrontendWelcomeController::class,'thankyou'])->name('thankyou');
 
-
-
+//Admin
 
 Route::middleware(["auth", "admin"])->name('admin.')->prefix('admin')->group(function() {
     Route::get("/", [AdminController::class, 'index'])->name('index');
     Route::resource("/categories", CategoryController::class);
+    Route::resource("/comments", CommentController::class);
     Route::resource('/menus', MenuController::class);
     Route::resource("/tables", TableController::class);
     Route::resource("/reservation", ReservationController::class);
