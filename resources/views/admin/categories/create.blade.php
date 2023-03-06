@@ -58,4 +58,11 @@
             </div>
         </div>
     </div>
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+	
+
+	<script src="{{asset('js/main.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </x-admin-layout>

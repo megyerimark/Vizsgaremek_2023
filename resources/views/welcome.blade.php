@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
 		<title>Budapest Bistro</title>
 	
 		
@@ -180,6 +181,14 @@
 	</body>
 	
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+	
+
+	<script src="{{asset('js/main.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+
 	</html>
 	
 
