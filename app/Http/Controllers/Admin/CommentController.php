@@ -20,4 +20,28 @@ class CommentController extends Controller
         $comment->delete();
         return to_route('admin.comments.index')->with('danger', 'Komment sikeresen törölve');  
     }
+
+    // public function search(Request $request){
+    //     $comments =Comment::where('first_name','Like','%'.$request->search.'%')->
+    //     orWhere('last_name','Like','%'.$request->search.'%')->
+    //     orWhere('email','Like','%'.$request->search.'%')->
+    //     orWhere('comment','Like','%'.$request->search.'%')->get();
+
+    //     foreach($comments as $comment){
+    //         $output.= 
+    //         "<tr>
+
+    //         <td>  '.$comment->first_name.'</td>
+
+    //         </tr>";
+    //     }
+    //     return response($output);
+    // }
+
+    public function search(){
+        $search = $_GET['query'];
+        $name_scr = Comment::where('first_name','LIKE','%'.$search.'%')->with('comments')->get();
+
+        return  to_route("admin.comments.search", compact('search'));
+    }
 }

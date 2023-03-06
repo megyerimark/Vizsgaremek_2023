@@ -4,11 +4,17 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+
     <div class="container">
-        <div class="search">
-            <input type="search" name="search" id="search" placeholder="Keresés" class="form-control">
-        </div>
+        <form action="{{url('/search')}}">
+            <div class="search">
+                <input type="search" name="query"
+                id="search" placeholder="Keresés" class="form-control">
+            </div>
+        </form>
     </div>
 
     <div class="py-12">
@@ -43,7 +49,7 @@
                         <th>Kommentek</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="Content">
                       <tr>
                         <td>{{$comment->id}}</td>
                         <td>{{$comment->first_name}}</td>
@@ -75,19 +81,29 @@
 
     </div>
     <script type="text/javascript">
-        $('#search').on('keyup', function()
-        {
+        // $('#search').on('keyup', function()
+        // {
 
-            $value =$(this).val();
-            // alert($value);
-            $.ajax({
-                type:'post',
-                url:"{{URL::to('search')}}",
-                data:{'search':$value},
-            });
-        })
+        //     $value =$(this).val();
+        //     // alert($value);
+        //     jQuery.ajax({
+        //         type:'get',
+        //         headers: {
+        //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        // },
+        //         url:"{{URL::to('search')}}",
+        //         dataType: 'JSON',
+        //         data:{'search':$value},
+        //         success:function(data){
+        //             alert(data);
+        //             $('#Content').html(data);
+                
+        //         }
+        //     });
+        // })
 
     </script>
-
+    
+@yield('content')
    
 </x-admin-layout>
