@@ -17,8 +17,8 @@
                     <img src="{{Storage::url($category->image)}}" alt="Image"/>
                   </p>
                 </div>
-                <a href="{{route('categories.show.', $category->id)}}">
-                  <div class="card-footer bg-transparent border-success">{{$category->description}}</div>
+                <a href="{{route('categories.show',$category->id)}}">
+                  <div class="card-footer bg-transparent border-success">{{$category->name}}</div>
                 </a>
               </div>
 
