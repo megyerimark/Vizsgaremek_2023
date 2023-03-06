@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\TableController;
 use App\Http\Controllers\Frontend\CategoryController as FrontendCategoryController;
+use App\Http\Controllers\Frontend\CommentController as FrontendCommentController;
 use App\Http\Controllers\Frontend\MenuController as FrontendMenuController;
 use App\Http\Controllers\Frontend\ReservationController as FrontendReservationController;
 use App\Http\Controllers\Frontend\WelcomeController as FrontendWelcomeController;
@@ -41,6 +42,8 @@ Route::post("/reservation/elso-lepes",[FrontendReservationController::class,'sto
 Route::get("/reservation/masodik-lepes",[FrontendReservationController::class,'stepTwo'])->name('reservation.step-two');
 Route::post("/reservation/masodik-lepes",[FrontendReservationController::class,'storeStepTwo'])->name('reservation.store.step.two');
 Route::get('/koszi_a_rendelesed',[FrontendWelcomeController::class,'thankyou'])->name('thankyou');
+Route::get("/kommentek",[FrontendCommentController::class,'storeComment'])->name('comment.store');
+
 
 //Admin
 
