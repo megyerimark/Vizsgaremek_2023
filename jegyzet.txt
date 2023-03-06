@@ -9,6 +9,10 @@ jelszó:password
 php artisan key:generate
 
 
+#ToDo 
+
+
+
 
 
 
