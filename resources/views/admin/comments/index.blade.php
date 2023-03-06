@@ -24,6 +24,7 @@
                 <table class="table" id="K">
                     <thead>
                       <tr>
+                        <th> <input type="checkbox" id="chAll"></th>
                         <th>ID</th>
                         <th>Vezetéknév</th>
                         <th>Kersztnév</th>
@@ -33,7 +34,10 @@
                     </thead>
                     <tbody>
                       <tr>
+                      <td><input type="checkbox" name="ids" class="checkBox" value="{{$comment->id}}"></td>
                         <td>{{$comment->id}}</td>
+                        
+                        
                         <td>{{$comment->first_name}}</td>
                         <td>{{$comment->last_name}}</td>
                         <td>{{$comment->email}}</td>

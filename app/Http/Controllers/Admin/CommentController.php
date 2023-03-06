@@ -38,10 +38,10 @@ class CommentController extends Controller
     //     return response($output);
     // }
 
-    public function search(){
-        $search = $_GET['query'];
-        $name_scr = Comment::where('first_name','LIKE','%'.$search.'%')->with('comments')->get();
+    // public function search(){
+    //     $search = $_GET[];
+    //     $name_scr = Comment::where('first_name','LIKE','%'.$search.'%')->with('comments')->get();
 
-        return  to_route("admin.comments.search", compact('search'));
-    }
+    //     return  to_route("admin.comments.search", compact('search'));
+    // }
 }

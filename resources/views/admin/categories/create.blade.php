@@ -6,6 +6,7 @@
     </x-slot>
 
     <div class="py-12">
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex m-2 p-2">
                 <a href="{{ route('admin.categories.index') }}"

@@ -4,6 +4,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    
 
     <div class="py-12">
         <meta name="csrf-token" content="{{ csrf_token() }}">
