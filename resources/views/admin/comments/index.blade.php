@@ -4,6 +4,12 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <div class="container">
+        <div class="search">
+            <input type="search" name="search" id="search" placeholder="Keresés" class="form-control">
+        </div>
+    </div>
 
     <div class="py-12">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -19,6 +25,12 @@
                 <style>
                     #k{
                         background-color: white;
+                    }
+                    .search{
+                        width: 100%;
+                        text-align: center;
+                        padding-top: 15px;
+                        margin-bottom: 15px; ;
                     }
                 </style>
                 <table class="table" id="K">
@@ -62,6 +74,20 @@
 
 
     </div>
+    <script type="text/javascript">
+        $('#search').on('keyup', function()
+        {
+
+            $value =$(this).val();
+            // alert($value);
+            $.ajax({
+                type:'post',
+                url:"{{URL::to('search')}}",
+                data:{'search':$value},
+            });
+        })
+
+    </script>
 
    
 </x-admin-layout>
