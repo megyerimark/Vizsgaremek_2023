@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <div class="container w-full px-5 py-6 mx-auto">
         <div class="flex items-center min-h-screen bg-gray-50">
             <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">

@@ -18,13 +18,14 @@ class CommentController extends Controller
     public function storeComment(Request $request)
     {
        
-            Comment::create([
+           $comments = Comment::create([
                 "first_name" => $request->first_name,
                 "last_name" => $request->last_name,
                 "email" => $request->email,
                 "comment" => $request->comment,
     
             ]);
+            $comments->save();
             return view('thankyou');
         }
        

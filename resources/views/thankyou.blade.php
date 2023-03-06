@@ -1,5 +1,6 @@
 <x-guest-layout>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <div class="container w-full px-5 py-6 mx-auto">
         <div class="">
             
@@ -12,9 +13,9 @@
         
     </div>
     </div>
+
    
-   
-   <form action="{{route('comment.store')}}" method="get">
+   <form action="{{route('comment.store')}}" method="post">
     @csrf
 
     <input type="text"  id="first_name" name="first_name" placeholder="name">

@@ -14,6 +14,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
     @vite('resources/js/app.js')
@@ -76,33 +79,28 @@
         {{ $slot }}
     </div>
 
-    <footer  class="bg-slate-100 border-t border-red-100 text-center ">
-        <div class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between">
-            <div class="flex flex-wrap justify-center">
-                <ul  class="flex items-center space-x-4">
-                    <ul style=color:gray >Design by:</ul>
-                    <ul>
-                        <li  style=color:gray>Orosz  &radic;</li>
-                    </ul>
-                    <ul >
-                        <li style=color:gray>Bognár  &radic;</li>
-                    </ul>
-                    <ul>
-                        <li style=color:gray>Megyeri  &radic;</li>
-                    </ul>
-                
-                    
-                </ul>
-        
-            </div>
-            <!-- <div class="flex justify-center  lg:mt-0">
-                <a>
-                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        class="w-6 h-6 text-blue-600" viewBox="0 0 24 24">
-                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>n
+
+           
 
 
 </body>
+<footer  class="bg-blue-300  footer-basic">
+  <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+  <ul class="list-inline">
+      <li class="list-inline-item"><a href="/">Főoldal</a></li>
+      <li class="list-inline-item"><a href="#">Elérhetőségek</a></li>
+      <li class="list-inline-item"><a href="#">Általános Szerződési Feltételek</a></li>
+  </ul>
+  <p class="copyright">Dentre © 2023</p>
+</div>
+</footer>
+
+       
+    
+    
+    
+               
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </html>

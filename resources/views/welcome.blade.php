@@ -180,8 +180,9 @@
 	</body>
 	
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
-	
 	</html>
+	
+
 	</x-guest-layout>
 	
 	
